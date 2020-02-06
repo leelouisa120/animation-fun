@@ -1,0 +1,101 @@
+:root {
+  --tear-box-height: 66px;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
+
+.overlay-tear {
+  position: absolute;
+  background: rgba(100, 100, 100, 0);
+  top: 220px;
+  bottom: 0px;
+  left: 180px;
+  right: 0px;
+}
+
+@keyframes flowdown-1 {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(var(--tear-box-height));
+  }
+}
+
+#tear-1 {
+  transform: translateY(-30px);
+  animation: flowdown-1 3s linear infinite;
+}
+
+.tear-box {
+  width: 100px;
+  height: var(--tear-box-height);
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#ddog {
+  animation: woof 2s ease 1;
+}
+
+@keyframes woof {
+  60% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
+
+.overlay-text {
+  position: absolute;
+  background: rgba(100, 100, 100, 0);
+  top: 60px;
+  left: 400px;
+  float: left;
+}
+.text-box {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  /* overflow: hidden; */
+  float: left;
+}
+
+#arf {
+  animation: slide-right 2s ease 1;
+  transform-origin: left bottom;
+  transform: translateX(220px);
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateX(-20px) translateY(250px);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0.2) translateX(-20px) translateY(250px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateX(220px) translateY(0px);
+  }
+  /* 100% {
+    opacity: 0;
+  } */
+}
+
+.ARF {
+  font-size: 70px;
+}
